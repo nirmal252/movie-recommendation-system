@@ -2,6 +2,7 @@ import pickle
 import requests
 import gzip
 import gdown
+import streamlit as st
 
 # TMDb API Setup
 
