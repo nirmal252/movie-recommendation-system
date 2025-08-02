@@ -1,8 +1,7 @@
 import streamlit as st
 import pickle
 import requests
-import gzip
-import gdown
+
 
 # TMDb API Setup
 
@@ -66,12 +65,11 @@ def fetch_poster(movie_title):
 
 
 # Load Preprocessed Data
-with gzip.open("movies.pkl.gz", "rb") as f:
-    new_df = pickle.load(f)
 
-with gzip.open("similarity.pkl.gz", "rb") as f:
-    similarity = pickle.load(f)
-    
+new_df = pickle.load(open("movies.pkl.gz", "rb"))
+similarity = pickle.load(open("similarity.pkl.gz", "rb"))
+
+
 
 # Recommendation Logic
 
@@ -123,4 +121,4 @@ if st.button("Show Recommendations"):
 
     with col5:
         st.text(names[4])
-        st.image(posters[4]) this is the code 
+        st.image(posters[4]) what to replsce here
