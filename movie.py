@@ -1,8 +1,8 @@
+import streamlit as st
 import pickle
 import requests
 import gzip
 import gdown
-import streamlit as st
 
 # TMDb API Setup
 
@@ -123,4 +123,4 @@ if st.button("Show Recommendations"):
 
     with col5:
         st.text(names[4])
-        st.image(posters[4])
+        st.image(posters[4]) this is the code 
